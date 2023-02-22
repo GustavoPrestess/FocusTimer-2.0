@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #ffff;
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  gap: 15rem;
+}
+
+.temporizador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#timer span {
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+  
+  font-size: 12.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #323238;
+}
+
+#controls {
+  display: flex;
+  gap: 4.0rem;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards button:hover{
+  background-color: hsla(194, 97%, 31%, 1);
+}
+
+.cards button:hover svg path{
+  fill: white;
+}
+
+.cards button {
+  background-color: #E1E1E6;
+  border-radius: 2.4rem;
+  Height: 15.2rem; 
+  width: 13.8rem;
+}
+
+.cards .active{
+ background: hsla(194, 97%, 31%, 1);
+}
+
+.active svg path {
+  fill: white;
+}
+
+@media (max-width: 860px) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 600px){
+  
+  :root {
+    font-size: 45%;
+  }
+  
+  main {
+    display: grid;
+    gap: 6rem;
+    width: 100vw;
+    place-content: center;
+  }
+  .temporizador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards div{
+    place-self: center;
+  }
+}
+
